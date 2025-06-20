@@ -7,6 +7,7 @@
     <link rel="icon" href="./img/51rttY7a+9L._h1_.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body class="bg-black flex flex-col gap-1.5 pr-2 pl-2">
     <nav class="flex items-center justify-between pt-2 pb-1 pl-5 bg-black text-white">
@@ -17,16 +18,16 @@
           </svg>
         </a>
         <div class="flex items-center gap-2 text-stone-300">
-          <a class="flex xl:flex rounded-full bg-neutral-800 p-4 hover:text-white hover:scale-[1.2] duration-[0.3s] ease-out transition-all " href="">
+          <a class="flex xl:flex rounded-full bg-neutral-800 p-4 hover:text-white hover:scale-[1.2] duration-[0.3s] ease-out transition-all text-[18px] " href="">
             <i class="fa-solid fa-house"></i>
           </a>
           <a class="xl:hidden rounded-full bg-neutral-800 pl-3 pr-3 pt-2 pb-2 hover:text-white hover:scale-[1.2] duration-[0.3s] ease-out transition-all " href="">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
-          <div class="hidden bg-neutral-800 pt-3 pb-3 pl-3 pr-3 rounded-full items-center gap-2 text-stone-300 hover:brightness-[1.5] hover:outline-white hover:outline-solid hover:outline duration-[0.3s] ease transition-all xl:flex ">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="hidden bg-neutral-800 pt-3 pb-3 pl-3 pr-3 rounded-full items-center gap-2 text-stone-100 hover:brightness-[1.5] hover:outline-white hover:outline-solid hover:outline duration-[0.3s] ease transition-all xl:flex ">
+            <i class="fa-solid fa-magnifying-glass text-[25px]  text-stone-300"></i>
             <input class="outline-none pl-1 w-[400px] pr-1 border-r border-solid border-neutral-500 " type="text" placeholder="¿Qué quieres reproducir?">
-            <i class="fa-regular fa-folder-open"></i>
+            <i class="fa-regular fa-folder-open text-[18px]  text-stone-300"></i>
           </div>
         </div>
       </div>
@@ -56,13 +57,13 @@
         </div>
       </div>
     </nav>
-    <div class="grid grid-cols-1 gap-2 lg:grid-cols-[26%74%] h-[76vh] md:h-[76vh] lg:h-[84vh] lg:pr-2">
+    <div class="grid grid-cols-1 gap-2 lg:grid-cols-[22%78%] h-[76vh] md:h-[76vh] lg:h-[84vh] lg:pr-2">
       <aside class="bg-neutral-900 hidden flex-col justify-between items-center text-white p-3 rounded-[10px] lg:flex ">
         <div class="flex flex-col gap-5 w-full ">
           <div class="flex justify-between items-center pl-2 pr-2 pb-5">
             <h3 class="font-bold ">Tu biblioteca</h3>
             <a class="rounded-full pt-1.5 pb-1.5 pl-3 pr-3 hover:bg-neutral-800 text-neutral-400  hover:text-white duration-[0.2s] ease-linear transition-all cursor-pointer" href="">
-              <i class=" fa-solid fa-plus"></i>
+              <i class="text-[18px] fa-solid fa-plus"></i>
             </a>
           </div>
           <div class="bg-neutral-800 pl-5 pr-5 pt-4 pb-4 rounded-[10px] flex flex-col gap-2 items-start">
@@ -99,53 +100,64 @@
 
         </div>
       </aside>
-      <main class="flex flex-col gap-2 p-5 bg-neutral-900 text-white rounded-[10px] overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500" >
-        <header class="flex flex-col gap-3 pr-7 pl-7 w-full overflow-x-hidden">
+      <main class="flex flex-col gap-2 bg-linear-to-t from-neutral-900 from-90% to-neutral-800 text-white rounded-[10px] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500  overflow-x-hidden"  >
+        <div class="p-5">
+          <header class="flex flex-col gap-3  ">
             <a class="flex justify-between items-center" href="">
               <h2>Canciones en tendencia</h2>
               <p>Mostrar todos</p>
             </a>
-          <div class="flex gap-4 w-full">
+          <div class="flex gap-4 overflow-hidden w-screen">
+            <div class="rounded-[10px]  flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 group ">
+              <div class="flex flex-col gap-2 relative">
+                <img class="rounded-[10px] w-[250px] shadow-xl/50" src="./img/la culpa.jpeg" alt="">
+                <a class="hover:underline" href="">la culpa (track 11)</a>
+                <div class="rounded-full pl-5 pr-5 pt-4 pb-4 bg-green-500 flex items-center justify-center absolute right-2 bottom-10 hover:cursor-pointer hover:animate__fadeInUp">
+                  <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                </div>
+              </div>
+              <div>
+                <a class="text-[14px] text-neutral-400 hover:underline" href="">Alleh,</a>
+                <a class="text-[14px] text-neutral-400 hover:underline" href="">Yorghaki</a>
+              </div>
+            </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./img/ab676161000051743b02770b21517dc3a03e340d.jpeg" alt="">
+              <img src="./img/kilin.jpeg" alt="">
               <p>Album</p>
             </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
+              <img src="./img/yoytu.jpeg" alt="">
               <p>Album</p>
             </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
+              <img src="./img/topdiesel.jpeg" alt="">
               <p>Album</p>
             </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
+              <img src="./img/lokenecesitas.jpeg" alt="">
               <p>Album</p>
             </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
+              <img src="./img/gohan y goku.jpeg" alt="">
               <p>Album</p>
             </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
+              <img src="./img/hallo.jpeg" alt="">
               <p>Album</p>
             </div>
             <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
-              <p>Album</p>
-            </div>
-            <div class="rounded-[10px] p-2 bg-black">
-              <img src="./" alt="">
+              <img src="./img/ferxxo.jpeg" alt="">
               <p>Album</p>
             </div>
           </div>
-        </header>
-        <section class="w-[10px]">
-          seccion 1
-        </section>
-        <footer class="w-[10px]">
-          footer
-        </footer>
+          </header>
+          <section class="w-[10px]">
+            seccion 1
+          </section>
+          <footer class="w-[10px]">
+            footer
+          </footer>
+        </div>
       </main>
     </div>
     <section class="flex flex-col w-full pt-2.5 pb-2 pl-[11px] pr-[24px]  col-span-full bg-linear-to-r/decreasing from-fuchsia-500  to-blue-400 text-white text-[14px] items-center justify-between font-semibold lg:flex-row gap-3 ">
