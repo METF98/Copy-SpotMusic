@@ -7,10 +7,11 @@
     <link rel="icon" href="./img/51rttY7a+9L._h1_.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./animate.css">
   </head>
-  <body class="bg-black grid grid-rows-[80px_1fr_80px] h-screen gap-2 px-2">
-    <nav class="flex items-center justify-between pt-2 pb-1 pl-5 bg-black text-white">
+  <body class="bg-black grid grid-rows-[60px_1fr] p-2 lg:grid-rows-[60px_1fr_70px] h-screen gap-1.5 ">
+    <!-------------------------------------Barra de Navegacion---------------------------------------------->
+    <nav class="flex items-center justify-between py-1 pl-5 bg-black text-white">
       <div class="flex items-center gap-4">
         <a class="pr-4" href="">
           <svg role="img" viewBox="0 0 24 24" class="e-9960-logo e-9960-baseline" aria-label="Spotify" aria-hidden="false" height="32" data-encore-id="logoSpotify" style="--encore-logo-fill-color: var(--decorative-base);" fill="white">
@@ -21,7 +22,7 @@
           <a class="flex xl:flex rounded-full bg-neutral-800 p-4 hover:text-white hover:scale-[1.2] duration-[0.3s] ease-out transition-all text-[18px] " href="">
             <i class="fa-solid fa-house"></i>
           </a>
-          <a class="xl:hidden rounded-full bg-neutral-800 pl-3 pr-3 pt-2 pb-2 hover:text-white hover:scale-[1.2] duration-[0.3s] ease-out transition-all " href="">
+          <a class="xl:hidden rounded-full bg-neutral-800 px-4 py-3 hover:text-white hover:scale-[1.2] duration-[0.3s] ease-out transition-all text-[18px] " href="">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
           <div class="hidden bg-neutral-800 pt-3 pb-3 pl-3 pr-3 rounded-full items-center gap-2 text-stone-100 hover:brightness-[1.5] hover:outline-white hover:outline-solid hover:outline duration-[0.3s] ease transition-all xl:flex ">
@@ -57,31 +58,35 @@
         </div>
       </div>
     </nav>
-    <main class="grid grid-cols-1 gap-2 lg:grid-cols-[25%75%] ">
-      <aside class="bg-neutral-900 hidden flex-col justify-between items-center text-white p-3 rounded-[10px] lg:flex ">
-        <div class="flex flex-col gap-5 w-full ">
+    <!-------------------------------------Contenido Principal---------------------------------------------->
+    <main class="grid grid-cols-1 gap-2 h-full lg:grid-cols-[20%_80%] overflow-hidden ">
+      <!-----------------------------------Navegacion Lateral----------------------------------------------->
+      <aside class="bg-neutral-900 hidden flex-col justify-between gap-5 overflow-y-hidden items-center text-white p-3 rounded-[10px] lg:flex ">
+        <div class="flex flex-col overflow-y-hidden">
           <div class="flex justify-between items-center pl-2 pr-2 pb-5">
             <h3 class="font-bold ">Tu biblioteca</h3>
             <a class="rounded-full pt-1.5 pb-1.5 pl-3 pr-3 hover:bg-neutral-800 text-neutral-400  hover:text-white duration-[0.2s] ease-linear transition-all cursor-pointer" href="">
               <i class="text-[18px] fa-solid fa-plus"></i>
             </a>
           </div>
-          <div class="bg-neutral-800 pl-5 pr-5 pt-4 pb-4 rounded-[10px] flex flex-col gap-2 items-start">
+          <div class="flex flex-col gap-5 overflow-y-auto py-2 [&::-webkit-scrollbar]:w-2 hover:[&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:bg-transparent [::-webkit-scrollbar-thumb]:bg-transparent dark:[&::-webkit-scrollbar-track]:bg-transparent dark:[&::-webkit-scrollbar-thumb]:bg-neutral-300/40 ">
+            <div class="bg-neutral-800 pl-5 pr-5 pt-4 pb-4 rounded-[10px] flex flex-col gap-2 items-start">
             <h3 class="font-bold ">Crea tu primera lista</h3>
             <p class="font-[400] text-[14px]">Es muy facíl, y te echaremos una mano</p>
             <button class="rounded-full bg-white pt-1 pb-1 pl-4 pr-4 font-bold text-black mt-4 text-[14px] hover:bg-neutral-200 hover:scale-[1.03] duration-[0.3s] ease-linear transition-all cursor-pointer">
               Crear lista
             </button>
-          </div>
-          <div class="bg-neutral-800 pl-5 pr-5 pt-4 pb-4 rounded-[10px] flex flex-col gap-2 items-start">
-            <h3 class="font-bold ">Encuentra el pódcasts que quieras seguir</h3>
-            <p class="font-[400] text-[14px]">Te avisaremos cuando salgan nuevos episodios</p>
-            <button class="rounded-full bg-white pt-1 pb-1 pl-4 pr-4 font-bold text-black mt-4 text-[14px] hover:bg-neutral-200 hover:scale-[1.03] duration-[0.3s] ease-linear transition-all cursor-pointer">
-              Explorar pódcasts
-            </button>
+            </div>
+            <div class="bg-neutral-800 pl-5 pr-5 pt-4 pb-4 rounded-[10px] flex flex-col gap-2 items-start">
+              <h3 class="font-bold ">Encuentra el pódcasts que quieras seguir</h3>
+              <p class="font-[400] text-[14px]">Te avisaremos cuando salgan nuevos episodios</p>
+              <button class="rounded-full bg-white pt-1 pb-1 pl-4 pr-4 font-bold text-black mt-4 text-[14px] hover:bg-neutral-200 hover:scale-[1.03] duration-[0.3s] ease-linear transition-all cursor-pointer">
+                Explorar pódcasts
+              </button>
+            </div>
           </div>
         </div>
-        <div class="flex flex-col gap-6 items-start pb-4 pl-5">
+        <div class="flex flex-col gap-6 items-start pb-4 pl-5 z-50">
           <div class="text-[11px] flex flex-col gap-3">
             <div class=" flex flex-wrap gap-x-6 gap-y-2 text-stone-400">
             <a href="">Legal</a>
@@ -100,19 +105,24 @@
 
         </div>
       </aside>
-      <section class="flex flex-col gap-2 bg-linear-to-t from-neutral-900 from-90% to-neutral-800 text-white rounded-[10px] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500  overflow-y-auto"  >
-        <div class=" ">
-          <header class="flex flex-col gap-3 a-center justify-center">
-            <a class="flex justify-between items-center" href="">
-              <h2>Canciones en tendencia</h2>
-              <p>Mostrar todos</p>
+      <!-----------------------------------Contenido de Canciones------------------------------------------->
+      <section class="flex bg-linear-to-t from-neutral-900 from-90% to-neutral-800 text-white rounded-[10px] overflow-y-auto "  >
+        <div class="flex flex-col gap-12 p-5 overflow-x-hidden bg-linear-to-r  from-neutral-900/10 from-90% to-neutral-950 [&::-webkit-scrollbar]:w-0 hover:[&::-webkit-scrollbar]:w-3 hover:[&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:bg-transparent [::-webkit-scrollbar-thumb]:bg-transparent dark:[&::-webkit-scrollbar-track]:bg-transparent dark:[&::-webkit-scrollbar-thumb]:bg-neutral-300/40 ">
+          <!-------------------------------Cancones en Tendencia------------------------------------------->
+          <header class="flex flex-col a-center justify-center relative cursor-pointer gap-2">
+            <div class="btn-next hidden rounded-full px-3 py-2 bg-neutral-800 items-center justify-center absolute right-2 top-[120px] z-[99] duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-neutral-700 shadow-xl/60  ">
+              <i class="text-[16px] text-white fa-solid fa-chevron-right"></i>
+            </div>
+            <a class="flex justify-between items-center pl-4" href="">
+              <h2 class="text-[24px] font-bold hover:underline">Canciones en tendencia</h2>
+              <p class="text-[14px] text-neutral-400 font-bold hover:underline">Mostrar todos</p>
             </a>
-            <div class="flex gap-4 overflow-x-auto">
-              <div class="rounded-[10px]  flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 ">
-                <div class="flex flex-col gap-2 relative">
-                  <img class="rounded-[10px] w-[200px] shadow-xl/50" src="./img/la culpa.jpeg" alt="">
-                  <a class="hover:underline" href="">la culpa (track 11)</a>
-                  <div class="rounded-full px-5 py-4 bg-green-500 flex items-center justify-center absolute right-2 bottom-10 hover:cursor-pointer hover:animate__fadeInUp">
+            <div class="flex gap-1 pr-10 overflow-x-auto lg:overflow-x-hidden w-screen [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [::-webkit-scrollbar-thumb]:bg-transparent dark:[&::-webkit-scrollbar-track]:bg-transparent dark:[&::-webkit-scrollbar-thumb]:bg-neutral-300/40 ">
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/la culpa.jpeg" alt="">
+                  <a class="hover:underline" href="">La culpa (track 11)</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
                     <i class=" text-[20px] text-black fa-solid fa-play"></i>
                   </div>
                 </div>
@@ -121,18 +131,478 @@
                   <a class="text-[14px] text-neutral-400 hover:underline" href="">Yorghaki</a>
                 </div>
               </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/kilin.jpeg" alt="">
+                  <a class="hover:underline" href="">Kilin'It Girl(feat.GIoRilla)</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-3 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <div class="rounded-[2px] px-1.5 text-black text-[10px] bg-neutral-400 font-bold">
+                    <P>E</P>
+                  </div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">j-hope,</a>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">GIoRilla</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/yoytu.jpeg" alt="">
+                  <a class="hover:underline" href="">YOyTÚ</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex flex-col flex-wrap gap-1">
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Ovy On The Drums,</a>
+                  <div>
+                    <a class="text-[14px] text-neutral-400 hover:underline m" href="">Quevedo,</a>
+                    <a class="text-[14px] text-neutral-400 hover:underline" href="">Beéle</a>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/topdiesel.jpeg" alt="">
+                  <a class="hover:underline" href="">top diesel</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Beéle,</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/lokenecesitas.jpeg" alt="">
+                  <a class="hover:underline" href="">LOKENECESITAS</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-3 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <div class="rounded-[2px] px-1.5 text-black text-[10px] bg-neutral-400 font-bold">
+                    <P>E</P>
+                  </div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">SAIKO,</a>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Omar Courtz</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/gohan y goku.jpeg" alt="">
+                  <a class="hover:underline" href="">Gohan y Goku</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-3 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <div class="rounded-[2px] px-1.5 text-black text-[10px] bg-neutral-400 font-bold">
+                    <P>E</P>
+                  </div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Arcángel,</a>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Auistin San</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/hallo.jpeg" alt="">
+                  <a class="hover:underline" href="">Hollow</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-3 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Stray Kids,</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/ferxxo.jpeg" alt="">
+                  <a class="hover:underline" href="">Ferxxo 500</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-3 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <div class="rounded-[2px] px-1.5 text-black text-[10px] bg-neutral-400 font-bold">
+                    <P>E</P>
+                  </div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Feid</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/la culpa.jpeg" alt="">
+                  <a class="hover:underline" href="">La culpa (track 11)</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Alleh,</a>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Yorghaki</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-linear-to-t hover:from-neutral-800 hover:from-20% hover:to-zinc-900 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/kilin.jpeg" alt="">
+                  <a class="hover:underline" href="">Kilin'It Girl(feat.GIoRilla)</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-3 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50 ">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <div class="rounded-[2px] px-1.5 text-black text-[10px] bg-neutral-400 font-bold">
+                    <P>E</P>
+                  </div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">j-hope,</a>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">GIoRilla</a>
+                </div>
+              </div>
             </div>
           </header>
-          <section class="">
-            seccion 1
+          <!-------------------------------Atistas Pupulares----------------------------------------------->
+          <section class="flex flex-col a-center justify-center relative cursor-pointer gap-2 ">
+            <div class="btn-next hidden rounded-full px-3 py-2 bg-neutral-800 items-center justify-center absolute right-2 top-[120px] z-[99] duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-neutral-700 shadow-xl/60">
+              <i class="text-[16px] text-white fa-solid fa-chevron-right"></i>
+            </div>
+            <a class="flex justify-between items-center pl-4" href="">
+              <h2 class="text-[24px] font-bold hover:underline">Artistas populares</h2>
+              <p class="text-[14px] text-neutral-400 font-bold hover:underline">Mostrar todos</p>
+            </a>
+            <div class="flex gap-1 w-screen pr-10 overflow-x-auto lg:overflow-x-hidden [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [::-webkit-scrollbar-thumb]:bg-transparent dark:[&::-webkit-scrollbar-track]:bg-transparent dark:[&::-webkit-scrollbar-thumb]:bg-neutral-300/40">
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/badbuny.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Bad Bunny</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/katolg.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">KAROL G</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/raw.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Rauw Alejandro</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/beele.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Beéle</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/feid.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Feid</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/mora.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Mora</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/ocean.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Danny Ocean</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/balvin.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">J Balvin</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/w sond.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">W Sound</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all  hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <div class="rounded-full overflow-hidden">
+                    <img class=" object-cover object-center w-[160px] h-[160px] shadow-xl/50 cursor-pointer" src="./img/maluma.jpeg" alt="">
+                  </div>
+                  <a class="hover:underline" href="">Maluma</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Artista</a>
+                </div>
+              </div>
+            </div>
           </section>
-          <footer class="">
-            footer
+          <!------------------------------Albunes y Sencillos Populares------------------------------------>
+          <section class="flex flex-col a-center justify-center relative cursor-pointer gap-2">
+            <div class="btn-next hidden rounded-full px-3 py-2 bg-neutral-800 items-center justify-center absolute right-2 top-[120px] z-[99] duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-neutral-700 shadow-xl/60 ">
+              <i class="text-[16px] text-white fa-solid fa-chevron-right"></i>
+            </div>
+            <a class="flex justify-between items-center pl-4" href="">
+              <h2 class="text-[24px] font-bold hover:underline">Álbunes y sencillos populares</h2>
+              <p class="text-[14px] text-neutral-400 font-bold hover:underline">Mostrar todos</p>
+            </a>
+            <div class="flex gap-1 pr-10 w-screen overflow-x-auto lg:overflow-x-hidden [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [::-webkit-scrollbar-thumb]:bg-transparent dark:[&::-webkit-scrollbar-track]:bg-transparent dark:[&::-webkit-scrollbar-thumb]:bg-neutral-300/40">
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/debi tirar mas fotos.jpeg" alt="">
+                  <a class="hover:underline" href="">DeBí TiRAR MáS FOtoS</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Bad Bunny</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/borondo.jpeg" alt="">
+                  <a class="hover:underline" href="">BORONDO</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Beéle</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/lo mismo de siempre.jpeg" alt="">
+                  <a class="hover:underline" href="">LO MISMO DE SIEMPRE</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Mora</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/veranosinti.jpeg" alt="">
+                  <a class="hover:underline" href="">Un Verano Sin Ti</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Bad Bunny</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/laciudad.jpeg" alt="">
+                  <a class="hover:underline" href="">LA CIUDAD</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Alleh,</a>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Yorghaki</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/priemra musa.jpeg" alt="">
+                  <a class="hover:underline" href="">PRIMERA MUSA</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Omar Courtz</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/private suite (vol. 2).jpeg" alt="">
+                  <a class="hover:underline" href="">Private Suite (Vol.2)</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">ROA</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/cosa nuestra.jpeg" alt="">
+                  <a class="hover:underline" href="">Cosa Nuestra</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">Rauw Alejandro</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/mañana sera bonito.jpeg" alt="">
+                  <a class="hover:underline" href="">MAÑANA SERÁ BONITO</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">KAROL G</a>
+                </div>
+              </div>
+              <div class="rounded-[10px] flex flex-col gap-1 p-4 duration-[0.3s] ease-out transition-all hover:bg-neutral-800 flex-none">
+                <div class="contenedor-img flex flex-col gap-2 relative duration-[0.3s] ease-out transition-all">
+                  <img class=" rounded-[10px] w-[160px] h-[150px] shadow-xl/50 cursor-pointer" src="./img/la plena.jpeg" alt="">
+                  <a class="hover:underline" href="">La Plena(W Sound 05)</a>
+                  <div class="btn-play hidden rounded-full px-5 py-4 bg-green-500 items-center justify-center absolute right-2 bottom-10 duration-[0.3s] ease-out transition-all hover:cursor-pointer hover:scale-[1.05] hover:bg-green-400 shadow-xl/50">
+                    <i class=" text-[20px] text-black fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div>
+                  <a class="text-[14px] text-neutral-400 hover:underline" href="">The Drums</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!------------------------------Footer----------------------------------------------------------->
+          <footer class="px-4">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5 items-start justify-between py-8 border-t-1 border-neutral-800">
+              <div class="flex flex-col gap-2">
+                <h4 class="font-bold text-white ">Empresa</h4>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Acerca de</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Empleo</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">For the Record</a>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-bold text-white ">Comunidad</h4>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Para artistas</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Desarrolladores</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Publicidad</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Inversores</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Proveedores</a>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-bold text-white ">Enlaces útiles</h4>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Asistencia</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">App gratis para móvil</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Popular por país</a>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-bold text-white ">Planes de SpotMusic</h4>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Premium Individual</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Premuim Duo</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Premium Familiar</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">Premium para Estudiantes</a>
+                <a class="text-neutral-400 text-[16px] hover:underline hover:text-white hover:cursor-pointer font-[500]">SpotMusic Free</a>
+              </div>
+              <div class="flex gap-4 pr-5 ld:justify-end">
+                <button class="rounded-full px-3 py-2 bg-neutral-800 hover:bg-neutral-700  ">
+                  <i class=" text-[16px] fa-brands fa-instagram"></i>
+                </button>
+                <button class="rounded-full px-3 py-2 bg-neutral-800 hover:bg-neutral-700  ">
+                  <i class=" text-[16px] fa-brands fa-x-twitter"></i>
+                </button>
+                <button class="rounded-full px-3 py-2 bg-neutral-800 hover:bg-neutral-700">
+                  <i class=" text-[16px] fa-brands fa-facebook"></i>
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center justify-between py-12 border-t-1 border-neutral-800 pr-5">
+              <p>© 2025 SpotMusic AB</p>
+              <p>Created by: Miguel Ticaray</p>
+            </div>
           </footer>
         </div>
       </section>
     </main>
-    <section class="flex flex-col w-full bg-linear-to-r/decreasing from-fuchsia-500  to-blue-400 text-white text-[14px] items-center justify-between font-semibold lg:flex-row gap-3 ">
+    <!-------------------------------------Anuncio de Registro Gratis---------------------------------------------->
+    <section class="hidden flex-row w-full px-5 bg-linear-to-r/decreasing from-fuchsia-500  to-blue-400 text-white text-[14px] items-center justify-between font-semibold lg:flex gap-3 ">
       <div>
         <h3> Muestra de SpotMusic</h3>
         <p class="text-[14px] xl:text-[16px]">
@@ -143,7 +613,7 @@
         </p>
       </div>
       <div>
-        <button class="rounded-full bg-white pl-[32px] pr-[32px] pt-3 pb-3 gap-2 text-black font-bold text-[16px] md:pl-[40px] md:pr-[40px] md:text-[12px] ">
+        <button class="rounded-full bg-white px-[32px] py-3 gap-2 text-black font-bold text-[16px] ">
           Registrarte gratis
         </button>
       </div>
